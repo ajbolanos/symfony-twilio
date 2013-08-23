@@ -1,0 +1,11 @@
+#_pbx_web:
+#    resource: "@PbxWebBundle/Controller/"
+#    type:     annotation
+#    prefix:   /
+
+_pbx:
+    resource: "@PbxWebBundle/Resources/config/routing.yml"
+
+_imagine:
+    resource: .
+    type:     imagine

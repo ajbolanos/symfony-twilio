@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:fb="http://www.facebook.com/2008/fbml" lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% if title is defined %}{{title}}{% endif %}{% endblock %}</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap-theme.min.css') }}" rel="stylesheet">
+    {% block stylesheet %}{% endblock %}
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="{{ asset('js/html5shiv.js') }}"></script>
+    <script src="{{ asset('js/respond.min.js') }}"></script>
+    <![endif]-->
+    {% block javascript_head %}{% endblock %}
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="{{ asset('images/favicon.ico') }}">
+    <!--
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    -->
+</head>
+<body>
+
+<div class="container">
+    {% block navbar %}{% endblock %}
+
+    {% block content %}<div class="content"></div>{% endblock %}
+    {% block footer %}
+        <footer>
+            <p>&copy; Aaron Bolanos 2013</p>
+        </footer>
+    {% endblock %}
+</div>
+{% block javascript_footer %}{% endblock %}
+<script src="{{ asset('js/jquery.min.js') }}"></script>
+<script src="{{ asset('js/bootstrap.min.js') }}"></script>
+</body>
+</html>

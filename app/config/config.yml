@@ -73,12 +73,21 @@ fos_user:
     from_email:
         address:     %mailer_from_email%
         sender_name: %mailer_from_name%
+    registration:
+        form:
+            type:               pbx_user_registration
+            name:               fos_user_registration_form
+            validation_groups:  [Registration, Default]
+#    registration:
+#        form:
+#            type: pbx_user_registration
 #    registration:
 #        form:
 #            handler: pbx.form.handler.registration
 #    profile:
 #        form:
 #            type:    pbx_user_profile
+
 
 # see https://github.com/avalanche123/AvalancheImagineBundle
 avalanche_imagine:

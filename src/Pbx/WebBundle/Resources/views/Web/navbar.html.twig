@@ -1,0 +1,17 @@
+{% block navbar %}
+<div class="header">
+    <ul class="nav nav-pills pull-right">
+        <li class="active"><a href="{{ path('pbx_web_home') }}">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li>
+            {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                <a href="{{ path('fos_user_profile_show') }}">Profile</a>
+            {% else %}
+                <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
+            {% endif %}
+        </li>
+    </ul>
+    <h3 class="text-muted">{{ project_name }}</h3>
+</div>
+{% endblock %}

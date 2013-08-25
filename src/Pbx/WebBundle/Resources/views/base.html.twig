@@ -8,6 +8,7 @@
 
     <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bootstrap-theme.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     {% block stylesheet %}{% endblock %}
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -37,8 +38,8 @@
         </footer>
     {% endblock %}
 </div><!-- /container -->
-{% block javascript_footer %}{% endblock %}
 <script src="{{ asset('js/jquery.min.js') }}"></script>
 <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+{% block javascript_footer %}{% endblock %}
 </body>
 </html>

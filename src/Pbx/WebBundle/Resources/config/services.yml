@@ -20,3 +20,9 @@ services:
         arguments: [%fos_user.model.user.class%]
         tags:
             - { name: form.type, alias: pbx_user_registration }
+
+    pbx_user.profile.form.type:
+        class: Pbx\WebBundle\Form\Type\ProfileFormType
+        arguments: [%fos_user.model.user.class%]
+        tags:
+            - { name: form.type, alias: pbx_user_profile }
